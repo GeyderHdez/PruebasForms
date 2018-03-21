@@ -16,7 +16,16 @@ namespace Pruebas
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
+            BringToFront();
             txtSelect.Select();
+        }
+      
+        private void lblIngresar_Click(object sender, EventArgs e)
+        {
+            Principal principal = new Principal();
+            principal.Show();
+
+            Hide();
         }
 
         private void txtUser_Click(object sender, EventArgs e)
@@ -26,15 +35,50 @@ namespace Pruebas
 
         private void txtPass_Click(object sender, EventArgs e)
         {
+            txtPass.UseSystemPasswordChar = true;
             txtPass.Text = "";
+            txtPass.PasswordChar = '*';
         }
 
-        private void lblIngresar_Click(object sender, EventArgs e)
+       
+        private void txtUser_KeyDown(object sender, KeyEventArgs e)
         {
-            Principal principal = new Principal();
-            principal.Show();
+            if (e.KeyValue == 13)
+            {
+                txtPass.UseSystemPasswordChar = true;
+                txtPass.Text = "";
+                txtPass.PasswordChar = '*';
+                txtPass.Focus();
 
-            Hide();
+                if (txtUser.Text == "")
+                {
+                    txtUser.Text = "usuario";
+                }
+            }
         }
+
+        private void txtPass_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue == 13)
+            {
+                if (txtPass.Text == "")
+                {
+                    txtPass.UseSystemPasswordChar = false;
+                    txtPass.Text = "contraseña";
+                }
+
+                if (txtUser.Text == "usuario")
+                {
+                    txtUser.Focus();
+                }
+                else
+                {
+                    //Ingresar();
+                }
+            }
+        }
+
+       
+
     }
 }
