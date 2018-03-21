@@ -16,8 +16,25 @@ namespace Pruebas
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
-            TransparencyKey = Color.FromArgb(0xAA, 0x00, 0xFF);
-            BackColor = Color.FromArgb(0xAA, 0x00, 0xFF);
+            txtSelect.Select();
+        }
+
+        private void txtUser_Click(object sender, EventArgs e)
+        {
+            txtUser.Text = "";
+        }
+
+        private void txtPass_Click(object sender, EventArgs e)
+        {
+            txtPass.Text = "";
+        }
+
+        private void lblIngresar_Click(object sender, EventArgs e)
+        {
+            Principal principal = new Principal();
+            principal.Show();
+
+            Hide();
         }
     }
 }
