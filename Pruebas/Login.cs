@@ -22,10 +22,15 @@ namespace Pruebas
       
         private void lblIngresar_Click(object sender, EventArgs e)
         {
-            Principal principal = new Principal();
-            principal.Show();
-
-            Hide();
+            if (txtUser.Text.Equals("geyder") && txtPass.Text.Equals("geyder"))
+            {
+                Ingresar();
+            }
+            else
+            {
+                Alert alert = new Alert("usuario no válido", Alert.AlertType.info);
+                alert.Show();
+            }
         }
 
         private void txtUser_Click(object sender, EventArgs e)
@@ -73,12 +78,21 @@ namespace Pruebas
                 }
                 else
                 {
-                    //Ingresar();
+                    if (txtUser.Text.Equals("geyder") && txtPass.Text.Equals("geyder"))
+                    {
+                        Ingresar();
+                    }
                 }
             }
         }
 
-       
+       void Ingresar()
+        {
+            Principal principal = new Principal();
+            principal.Show();
+
+            Hide();
+        }
 
     }
 }

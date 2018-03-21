@@ -117,35 +117,41 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="loading-red" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\loading-red.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="loading-small" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\loading-small.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ic_do_not_disturb_on_white_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic_do_not_disturb_on_white_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="loading-blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\loading-blue.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ic_cancel_white_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic_cancel_white_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="success" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\success.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="warning" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\warning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ic_do_not_disturb_on_white_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic_do_not_disturb_on_white_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="info" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="error" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\error.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
   </data>
 </root>
