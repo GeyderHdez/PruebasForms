@@ -41,17 +41,18 @@
             // 
             // lblMensaje
             // 
-            this.lblMensaje.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensaje.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensaje.Location = new System.Drawing.Point(71, 28);
             this.lblMensaje.Name = "lblMensaje";
             this.lblMensaje.Size = new System.Drawing.Size(212, 23);
             this.lblMensaje.TabIndex = 0;
             this.lblMensaje.Text = "Welcome";
+            this.lblMensaje.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // icon
             // 
             this.icon.Image = ((System.Drawing.Image)(resources.GetObject("icon.Image")));
-            this.icon.Location = new System.Drawing.Point(5, 12);
+            this.icon.Location = new System.Drawing.Point(13, 12);
             this.icon.Name = "icon";
             this.icon.Size = new System.Drawing.Size(50, 50);
             this.icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

@@ -55,6 +55,7 @@
     <Compile Include="Alert.Designer.cs">
       <DependentUpon>Alert.cs</DependentUpon>
     </Compile>
+    <Compile Include="Animation.cs" />
     <Compile Include="Aviso.cs">
       <SubType>Form</SubType>
     </Compile>

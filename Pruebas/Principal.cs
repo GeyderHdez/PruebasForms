@@ -47,7 +47,7 @@ namespace Pruebas
 
         private void pbxCerrar_Click(object sender, EventArgs e)
         {
-            Dispose();
+            Application.Exit();
         }
 
         private void pbxMinimizar_Click(object sender, EventArgs e)

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace Pruebas
 {
@@ -15,7 +16,7 @@ namespace Pruebas
         public Alert(string mensaje, AlertType type)
         {
             InitializeComponent();
-
+            Region = Region.FromHrgn(CreateRoundRectRgn(2, 2, Width, Height, 15, 15));
             switch (type)
             {
                 case AlertType.success:
@@ -46,7 +47,7 @@ namespace Pruebas
         {
             new Alert(mensaje, type).Show();
         }
-         
+
         public enum AlertType
         {
             success, info, warning, error
@@ -54,15 +55,15 @@ namespace Pruebas
 
         private void Alert_Load(object sender, EventArgs e)
         {
-            Top = -1 * Height;  
-            Left = Screen.PrimaryScreen.Bounds.Width - Width - 60;
+            Top = -1 * Height;
+            Left = (Screen.PrimaryScreen.Bounds.Width /2) - (Width/2);
             show.Start();
             timeOut.Start();
         }
 
         private void timeOut_Tick(object sender, EventArgs e)
         {
-            close.Start();  
+            close.Start();
         }
 
         int interval = 0;
@@ -88,5 +89,8 @@ namespace Pruebas
             else
                 Hide();
         }
+
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn(int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int nHeightEllipse);
     }
 }
