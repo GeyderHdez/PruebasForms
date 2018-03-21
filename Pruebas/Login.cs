@@ -28,8 +28,8 @@ namespace Pruebas
             }
             else
             {
-                Alert alert = new Alert("usuario no válido", Alert.AlertType.info);
-                alert.Show();
+                Alert.Show("usuario no válido", Alert.AlertType.warning);
+               
             }
         }
 
@@ -90,8 +90,8 @@ namespace Pruebas
         {
             Principal principal = new Principal();
             principal.Show();
-
             Hide();
+            Alert.Show("Ingreso exitoso", Alert.AlertType.success);
         }
 
     }

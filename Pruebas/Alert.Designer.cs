@@ -28,10 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Alert));
             this.lblMensaje = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.icon = new System.Windows.Forms.PictureBox();
+            this.ListaIcon = new System.Windows.Forms.ImageList(this.components);
+            this.timeOut = new System.Windows.Forms.Timer(this.components);
+            this.show = new System.Windows.Forms.Timer(this.components);
+            this.close = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.icon)).BeginInit();
             this.SuspendLayout();
             // 
             // lblMensaje
@@ -43,15 +48,37 @@
             this.lblMensaje.TabIndex = 0;
             this.lblMensaje.Text = "Welcome";
             // 
-            // pictureBox1
+            // icon
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(5, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.icon.Image = ((System.Drawing.Image)(resources.GetObject("icon.Image")));
+            this.icon.Location = new System.Drawing.Point(5, 12);
+            this.icon.Name = "icon";
+            this.icon.Size = new System.Drawing.Size(50, 50);
+            this.icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.icon.TabIndex = 1;
+            this.icon.TabStop = false;
+            // 
+            // ListaIcon
+            // 
+            this.ListaIcon.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ListaIcon.ImageStream")));
+            this.ListaIcon.TransparentColor = System.Drawing.Color.Transparent;
+            this.ListaIcon.Images.SetKeyName(0, "success.png");
+            this.ListaIcon.Images.SetKeyName(1, "info.png");
+            this.ListaIcon.Images.SetKeyName(2, "warning.png");
+            this.ListaIcon.Images.SetKeyName(3, "error.png");
+            // 
+            // timeOut
+            // 
+            this.timeOut.Interval = 3000;
+            this.timeOut.Tick += new System.EventHandler(this.timeOut_Tick);
+            // 
+            // show
+            // 
+            this.show.Tick += new System.EventHandler(this.show_Tick);
+            // 
+            // close
+            // 
+            this.close.Tick += new System.EventHandler(this.close_Tick);
             // 
             // Alert
             // 
@@ -60,13 +87,15 @@
             this.BackColor = System.Drawing.Color.SeaGreen;
             this.ClientSize = new System.Drawing.Size(311, 74);
             this.ControlBox = false;
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.icon);
             this.Controls.Add(this.lblMensaje);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Alert";
+            this.Opacity = 0.9D;
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Alert_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -74,6 +103,10 @@
         #endregion
 
         private System.Windows.Forms.Label lblMensaje;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox icon;
+        private System.Windows.Forms.ImageList ListaIcon;
+        private System.Windows.Forms.Timer close;
+        public System.Windows.Forms.Timer timeOut;
+        public System.Windows.Forms.Timer show;
     }
 }
