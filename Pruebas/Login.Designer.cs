@@ -106,6 +106,7 @@
             this.txtUser.Text = "usuario";
             this.txtUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtUser.Click += new System.EventHandler(this.txtUser_Click);
+            this.txtUser.Enter += new System.EventHandler(this.txtUser_Enter);
             this.txtUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUser_KeyDown);
             // 
             // txtPass

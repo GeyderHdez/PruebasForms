@@ -103,11 +103,24 @@ namespace Pruebas
             }
         }
 
+        private void txtUser_Enter(object sender, EventArgs e)
+        {
+            txtUser.Text = "";
+            if (txtPass.Text == "")
+            {
+                txtPass.UseSystemPasswordChar = false;
+                txtPass.Text = "contraseña";
+            }
+        }
 
         private void txtPass_Enter(object sender, EventArgs e)
         {
             txtPass.Text = "";
             txtPass.UseSystemPasswordChar = true;
+            if (txtUser.Text == "")
+            {
+                txtUser.Text = "usuario";
+            }
         }
 
         void Ingresar()

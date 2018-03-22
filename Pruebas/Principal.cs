@@ -25,14 +25,12 @@ namespace Pruebas
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
-            //IniciaProceso();
+            IniciaProceso();
         }
 
         public void IniciaProceso()
         {
-            Aviso aviso = new Aviso();
-
-            aviso.Mostrar("Inicio", "Iniciando aplicación de Prueba", "Continuar");
+            Aviso.Mostrar("Inicio", "Iniciando aplicación de Prueba", "Continuar");
 
             string Nombre = "Prueba Exitosa";
 
@@ -53,6 +51,15 @@ namespace Pruebas
         private void pbxMinimizar_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult;
+
+            dialogResult = Dialogo.Show("Responde SI o NO", "Seleccione un boton", "SI", "NO");
+
+            Aviso.Mostrar("Boton seleccionado","El usuario eligió " + dialogResult.ToString(),"Aceptar");
         }
     }
 }

@@ -12,24 +12,27 @@ namespace Pruebas
 {
     public partial class Aviso : Form
     {
-        public Aviso()
+        public Aviso(string titulo, string mensaje, string boton)
         {
             InitializeComponent();
-        }
 
-        public void Mostrar(string titulo, string mensaje, string boton)
-        {
             lblNombre.Text = titulo;
             lblMensaje.Text = mensaje;
             btnAceptar.Text = boton;
             FormBorderStyle = FormBorderStyle.FixedDialog;
-            TopMost = true;
             StartPosition = FormStartPosition.CenterScreen;
+            TopMost = true;
             ShowDialog();
+        }
+
+        public static void Mostrar(string titulo, string mensaje, string boton)
+        {
+            new Aviso(titulo, mensaje, boton);
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+            //Hide();
             Dispose();
         }
     }
