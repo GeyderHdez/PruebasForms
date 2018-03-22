@@ -56,7 +56,8 @@ namespace Pruebas
         private void Alert_Load(object sender, EventArgs e)
         {
             Top = -1 * Height;
-            Left = (Screen.PrimaryScreen.Bounds.Width /2) - (Width/2);
+            //Left = (Screen.PrimaryScreen.Bounds.Width /2) - (Width/2);
+            Left = Screen.PrimaryScreen.Bounds.Width - Width -60;
             show.Start();
             timeOut.Start();
         }

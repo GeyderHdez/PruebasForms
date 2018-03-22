@@ -32,7 +32,6 @@ namespace Pruebas
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            //Hide();
             Dispose();
         }
     }

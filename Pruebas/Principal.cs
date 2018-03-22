@@ -21,6 +21,7 @@ namespace Pruebas
         public Principal()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void btnInicio_Click(object sender, EventArgs e)

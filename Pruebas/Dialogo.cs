@@ -35,13 +35,13 @@ namespace Pruebas
         private void btnSI_Click(object sender, EventArgs e)
         {
             dialogResult = DialogResult.OK;
-            Hide();
+            Dispose();
         }
 
         private void btnNO_Click(object sender, EventArgs e)
         {
             dialogResult = DialogResult.No;
-            Hide();
+            Dispose();
         }
     }
 }
