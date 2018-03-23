@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 using Excel = Microsoft.Office.Interop.Excel;
 
 
@@ -26,22 +27,33 @@ namespace Pruebas
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
+
             IniciaProceso();
         }
 
         public void IniciaProceso()
         {
-            Aviso.Mostrar("Inicio", "Iniciando aplicación de Prueba", "Continuar");
 
-            string Nombre = "Prueba Exitosa";
+            if (Dialogo.Show("Notificación", "Desea crear el archivo Excel", "SI", "NO").Equals(DialogResult.OK))
+            {
+                string Nombre = "Prueba Exitosa";
 
-            AppExcel = new Excel.Application();
-            Libro = AppExcel.Workbooks.Add();
-            Hoja = AppExcel.ActiveSheet;
-            AppExcel.Visible = true;
+                AppExcel = new Excel.Application();
+                Libro = AppExcel.Workbooks.Add();
+                Hoja = AppExcel.ActiveSheet;
+                AppExcel.Visible = true;
+                Hoja.Name = Nombre;
 
-            //Libro.SaveAs("Prueba");
-            Hoja.Name = Nombre;
+                //Libro.SaveAs("Prueba");
+                Aviso.Mostrar("Notificación", " Proceso terminado con éxito", "Finalizar");
+            }
+            else
+            {
+                Aviso.Mostrar("Notificación", " Proceso terminado \nNo realizó proceso", "Finalizar");
+            }
+
+
+
         }
 
         private void pbxCerrar_Click(object sender, EventArgs e)
@@ -54,13 +66,22 @@ namespace Pruebas
             WindowState = FormWindowState.Minimized;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnTrabajar_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult;
 
-            dialogResult = Dialogo.Show("Responde SI o NO", "Seleccione un boton", "SI", "NO");
+            Work work = new Work();
+            work.Working += new Work.work(Notificar);
 
-            Aviso.Mostrar("Boton seleccionado","El usuario eligió " + dialogResult.ToString(),"Aceptar");
+            Thread thread = new Thread(work.Trabajando);
+            thread.Start();
+        }
+
+        public void Notificar(string mensaje)
+        {
+            if (InvokeRequired)
+            {
+                Invoke(new Action(() => lblStatus.Text = mensaje));
+            }
         }
     }
 }
