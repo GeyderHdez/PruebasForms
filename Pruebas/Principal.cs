@@ -44,7 +44,7 @@ namespace Pruebas
                 AppExcel.Visible = true;
                 Hoja.Name = Nombre;
 
-                //Libro.SaveAs("Prueba");
+                Libro.SaveAs("Archivo - " + DateTime.Now.ToShortDateString());
                 Aviso.Mostrar("Notificación", " Proceso terminado con éxito", "Finalizar");
             }
             else

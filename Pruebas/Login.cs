@@ -41,21 +41,25 @@ namespace Pruebas
         private void txtUser_Click(object sender, EventArgs e)
         {
             txtUser.Text = "";
+            txtUser.ForeColor = Color.DimGray;
             if (txtPass.Text == "")
             {
                 txtPass.Text = "";
                 txtPass.UseSystemPasswordChar = false;
                 txtPass.Text = "password";
+                txtUser.ForeColor = Color.DarkGray;
             }
         }
 
         private void txtPass_Click(object sender, EventArgs e)
         {
+            txtPass.ForeColor = Color.DimGray;
             txtPass.Text = "";
             txtPass.UseSystemPasswordChar = true;
             if (txtUser.Text == "")
             {
                 txtUser.Text = "usuario";
+                txtUser.ForeColor = Color.DarkGray;
             }
         }
 
@@ -71,6 +75,7 @@ namespace Pruebas
                 if (txtUser.Text == "")
                 {
                     txtUser.Text = "usuario";
+                    txtUser.ForeColor = Color.DarkGray;
                 }
             }
         }
@@ -83,6 +88,7 @@ namespace Pruebas
                 {
                     txtPass.UseSystemPasswordChar = false;
                     txtPass.Text = "contraseña";
+                    txtPass.ForeColor = Color.DarkGray;
                 }
 
                 if (txtUser.Text == "usuario")
@@ -110,6 +116,7 @@ namespace Pruebas
             {
                 txtPass.UseSystemPasswordChar = false;
                 txtPass.Text = "contraseña";
+                txtPass.ForeColor = Color.DarkGray;
             }
         }
 
@@ -120,6 +127,7 @@ namespace Pruebas
             if (txtUser.Text == "")
             {
                 txtUser.Text = "usuario";
+                txtUser.ForeColor = Color.DarkGray;
             }
         }
 

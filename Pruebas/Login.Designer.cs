@@ -50,7 +50,7 @@
             this.shapeIngresar,
             this.shapePass,
             this.shapeUser});
-            this.shapeContainer1.Size = new System.Drawing.Size(322, 365);
+            this.shapeContainer1.Size = new System.Drawing.Size(483, 562);
             this.shapeContainer1.TabIndex = 4;
             this.shapeContainer1.TabStop = false;
             // 
@@ -70,6 +70,7 @@
             this.shapePass.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
             this.shapePass.BorderColor = System.Drawing.Color.White;
             this.shapePass.CornerRadius = 7;
+            this.shapePass.Enabled = false;
             this.shapePass.Location = new System.Drawing.Point(65, 182);
             this.shapePass.Name = "shapePass";
             this.shapePass.Size = new System.Drawing.Size(200, 40);
@@ -80,6 +81,7 @@
             this.shapeUser.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
             this.shapeUser.BorderColor = System.Drawing.Color.White;
             this.shapeUser.CornerRadius = 7;
+            this.shapeUser.Enabled = false;
             this.shapeUser.Location = new System.Drawing.Point(65, 104);
             this.shapeUser.Name = "shapeUser";
             this.shapeUser.SelectionColor = System.Drawing.Color.SteelBlue;
@@ -87,10 +89,9 @@
             // 
             // txtSelect
             // 
-            this.txtSelect.Location = new System.Drawing.Point(444, 107);
-            this.txtSelect.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSelect.Location = new System.Drawing.Point(666, 165);
             this.txtSelect.Name = "txtSelect";
-            this.txtSelect.Size = new System.Drawing.Size(68, 20);
+            this.txtSelect.Size = new System.Drawing.Size(100, 26);
             this.txtSelect.TabIndex = 0;
             // 
             // txtUser
@@ -99,9 +100,10 @@
             this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUser.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUser.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtUser.Location = new System.Drawing.Point(90, 112);
+            this.txtUser.Location = new System.Drawing.Point(135, 172);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(152, 24);
+            this.txtUser.Size = new System.Drawing.Size(228, 35);
             this.txtUser.TabIndex = 1;
             this.txtUser.Text = "usuario";
             this.txtUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -115,9 +117,10 @@
             this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPass.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtPass.Location = new System.Drawing.Point(90, 191);
+            this.txtPass.Location = new System.Drawing.Point(135, 294);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(152, 24);
+            this.txtPass.Size = new System.Drawing.Size(228, 35);
             this.txtPass.TabIndex = 2;
             this.txtPass.Text = "contraseña";
             this.txtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -130,9 +133,10 @@
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Verdana", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblTitulo.Location = new System.Drawing.Point(91, 9);
+            this.lblTitulo.Location = new System.Drawing.Point(136, 14);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(140, 59);
+            this.lblTitulo.Size = new System.Drawing.Size(214, 86);
             this.lblTitulo.TabIndex = 6;
             this.lblTitulo.Text = "login";
             // 
@@ -141,8 +145,9 @@
             this.lblIngresar.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIngresar.ForeColor = System.Drawing.Color.White;
             this.lblIngresar.Location = new System.Drawing.Point(0, 0);
+            this.lblIngresar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIngresar.Name = "lblIngresar";
-            this.lblIngresar.Size = new System.Drawing.Size(175, 38);
+            this.lblIngresar.Size = new System.Drawing.Size(262, 58);
             this.lblIngresar.TabIndex = 3;
             this.lblIngresar.Text = "Ingresar";
             this.lblIngresar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -152,17 +157,18 @@
             // 
             this.pnlIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(165)))), ((int)(((byte)(245)))));
             this.pnlIngresar.Controls.Add(this.lblIngresar);
-            this.pnlIngresar.Location = new System.Drawing.Point(79, 278);
+            this.pnlIngresar.Location = new System.Drawing.Point(118, 428);
+            this.pnlIngresar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlIngresar.Name = "pnlIngresar";
-            this.pnlIngresar.Size = new System.Drawing.Size(175, 38);
+            this.pnlIngresar.Size = new System.Drawing.Size(262, 58);
             this.pnlIngresar.TabIndex = 7;
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(322, 365);
+            this.ClientSize = new System.Drawing.Size(483, 562);
             this.ControlBox = false;
             this.Controls.Add(this.pnlIngresar);
             this.Controls.Add(this.lblTitulo);
@@ -171,6 +177,7 @@
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.shapeContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Login";
             this.pnlIngresar.ResumeLayout(false);
             this.ResumeLayout(false);

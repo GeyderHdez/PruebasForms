@@ -35,7 +35,7 @@ namespace Pruebas
                     icon.Image = ListaIcon.Images[2];
                     break;
                 case AlertType.error:
-                    BackColor = Color.Crimson;
+                    BackColor = Color.Red;
                     lblMensaje.Text = mensaje;
                     icon.Image = ListaIcon.Images[3];
                     break;
